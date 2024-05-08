@@ -5,7 +5,7 @@ import "./User.css";
 const EditUser = () => {
   const [user, setUser] = useState([]);
   const { id } = useParams();
-  const getUserApi = process.env("GET_API");
+  const getUserApi = process.env.GET_API;
 
   useEffect(() => {
     getUser();

@@ -10,7 +10,7 @@ const EditUser = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
-  const getUserApi = process.env("EDIT_API");
+  const getUserApi = process.env.EDIT_API;
 
   useEffect(() => {
     getUser();

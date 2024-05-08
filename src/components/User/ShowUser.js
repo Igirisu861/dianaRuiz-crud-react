@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Loader from "../Common/Loader";
 
 const ShowUser = () => {
-  const showUserApi = process.env("SHOW_API");
+  const showUserApi = process.env.SHOW_API;
 
   const [user, setUser] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
