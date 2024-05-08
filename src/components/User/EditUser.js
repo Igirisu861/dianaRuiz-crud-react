@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -9,7 +10,7 @@ const EditUser = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
-  const getUserApi = "http://localhost:3001/usuarios";
+  const getUserApi = process.env("EDIT_API");
 
   useEffect(() => {
     getUser();
@@ -96,14 +97,14 @@ const EditUser = () => {
         </div>
         <div className="mb-3">
           <label for="pwd" className="form-label">
-            Phone
+            Password
           </label>
           <input
             type="text"
             className="form-control"
-            id="phone"
-            name="phone"
-            value={user.phone}
+            id="password"
+            name="password"
+            value={user.password}
             onChange={handelInput}
           />
         </div>

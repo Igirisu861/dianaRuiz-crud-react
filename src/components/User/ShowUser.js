@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Loader from "../Common/Loader";
 
 const ShowUser = () => {
-  const showUserApi = "http://localhost:3001/usuarios";
+  const showUserApi = process.env("SHOW_API");
 
   const [user, setUser] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
